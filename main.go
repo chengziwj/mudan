@@ -18,6 +18,6 @@ func main() {
 
 	r := gin.Default()
 	r.POST("/api/user", users.SaveUser)
-
+	r.GET("/api/user/:uid", users.GetUser)
 	r.Run(":8080")
 }
